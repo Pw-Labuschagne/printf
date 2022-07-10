@@ -2,8 +2,10 @@
 #define MAIN_H
 
 
-#typedef(struct fun);
-
+typedef struct fun;
+{char *fun}
+int (*f)(va_list);
+}op_f;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
