@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+
+#typedef(struct fun);
+
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _print_str(va_list);
