@@ -25,4 +25,12 @@ op_f ops[] = {
 
 int c = 0; //*basic counter to determine wheich function to call
 
-while (ops[i])
+while (ops[c])
+{
+if (ops[c].fun == a)
+{
+	return (ops[c].fun);
+}
+c++
+}
+
