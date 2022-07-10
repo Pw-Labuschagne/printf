@@ -1,0 +1,3 @@
+git add .
+git commit -m "Printf self written function"
+git push
