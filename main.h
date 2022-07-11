@@ -1,16 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
-<<<<<<< HEAD
 #include <stdarg.h>
-=======
-
 
 typedef struct fun_run
 {
 char *fun_run;
 int (*f)(va_list);
 }op_f;
->>>>>>> 16905e5f0ba4dbc4ec47bb29e0bbf333cafb1f79
 
 int _putchar(char c);
 int _printf(const char *format, ...);
