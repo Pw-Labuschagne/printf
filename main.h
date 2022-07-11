@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 typedef struct fun_run
 {
 char *fun_run;

@@ -9,32 +9,19 @@
  */
 int _printf(const char *format, ...)
 {
+int i = 0, c = 0;
 va_list buff;
-char *c;
-/*int i = 0;*/
 
-while (format == NULL)
+if (format == NULL)
 {
-return (0);
+	return (0);
 }
-
 va_start(buff, format);
-/*for (i = 0)*/
-
-*c = va_arg(buff, char);
-
-/*if (format != 0)
-if (format != 0)
+c += va_arg(buff, int);
+while (format[i] != '\0')
 {
-i++;
-}*/
-va_end(buff);
-
-while (format[i])
-{
-	fun_run(c)(buff);
+	i++;
+	c++;
 }
-
-
-return (0);
+return (c);
 }
