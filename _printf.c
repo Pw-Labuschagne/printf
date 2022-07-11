@@ -19,9 +19,10 @@ return (0);
 }
 
 va_start(buff, format);
- for (i = 0)		 {
+/*for (i = 0)*/
+
 c = va_arg(buff, char *);
-}
+
 if (format != 0)
 {
 i++;
