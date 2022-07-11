@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 {
 va_list buff;
 char *c;
-int i = 0;
+/*int i = 0;*/
 
 while (format == NULL)
 {
@@ -22,13 +22,13 @@ va_start(buff, format);
  for (i = 0)		 {
 c = va_arg(buff, char *);
 }
-if (format != 0)
+/*if (format != 0)
 {
 i++;
-}
+}*/
 while (format[i])
 {
-	fun(c)(buff);
+	fun_run(c)(buff);
 }
 
 va_end(buff);
