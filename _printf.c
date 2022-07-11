@@ -19,10 +19,16 @@ return (0);
 }
 
 va_start(buff, format);
- for (i = 0)		 {
+/*for (i = 0)*/
+
 c = va_arg(buff, char *);
+<<<<<<< HEAD
 }
 /*if (format != 0)
+=======
+
+if (format != 0)
+>>>>>>> 16905e5f0ba4dbc4ec47bb29e0bbf333cafb1f79
 {
 i++;
 }*/
