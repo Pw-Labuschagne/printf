@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifdef _MAIN_H_
+#define _MAIN_H_
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
@@ -12,7 +12,7 @@
 
 typedef struct helper_funcs
 {
-	char c;
+	char c ;
 	int (*f)(va_list);
 } hf;
 
