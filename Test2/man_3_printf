@@ -34,7 +34,7 @@ _printf("%i is positive", var);
 None
 
 .SH AUTHORS
-Bob Deprizio, Kyle Campbell
+Jacques And Pw 
 
 .SH SEE ALSO
 printf(3)

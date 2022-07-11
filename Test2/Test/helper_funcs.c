@@ -89,61 +89,23 @@ int print_ch(va_list argu)
 
 int print_str(va_list argu)
 {
-	char *s;
+OAOAOA	char *s;
 	char *nu = "(null)";
 
 	int count = 0, i;
 
 	s = va_arg(argu, char *);
 
-	if (s == NULL)
+OAOAOA	if (s == NULL)
 	{
-		write(1, nu, 6);
-		return (6);
-	}
+OAOAOA		write(1, nu, 6);
+OAOAOA		return (6);
+OAOAOA	}
 
 	for (i = 0; s[i]; i++)
 		count++;
 
 	write(1, s, count);
 
-	return (count);
-}
-
-/**
- * print_rev_str - Function that prints a string of charracters to output
- * stream in reverse and returns number of bytes printed
- * @argu: va_list input
- * Return: Int for size of character string passed
- */
-
-int print_rev_str(va_list argu)
-{
-	char *s;
-	char *t;
-	char *nu = "(null)";
-
-	int count = 0, i;
-
-	s = va_arg(argu, char *);
-
-	for (i = 0; s[i]; i++)
-		count++;
-
-	t = malloc(sizeof(char) * (count + 1));
-
-	if (s == NULL || t == NULL)
-	{
-		write(1, nu, 6);
-		return (6);
-	}
-
-	for (i = 0; s[i]; i++)
-		t[i] = s[i];
-
-	t = reverse(t);
-
-	write(1, t, count);
-	free(t);
 	return (count);
 }

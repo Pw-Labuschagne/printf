@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Test2/main.h
 #ifdef _MAIN_H_
+=======
+#ifndef _MAIN_H_
+>>>>>>> 7518ce1c9e7c3138d8c5498a484525f397cd8f46:Test2/holberton.h
 #define _MAIN_H_
 #include <stdlib.h>
 #include <stdarg.h>
