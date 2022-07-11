@@ -21,18 +21,20 @@ return (0);
 va_start(buff, format);
 /*for (i = 0)*/
 
-c = va_arg(buff, c);
-}
+*c = va_arg(buff, char);
+
 /*if (format != 0)
 if (format != 0)
 {
 i++;
 }*/
+va_end(buff);
+
 while (format[i])
 {
 	fun_run(c)(buff);
 }
 
-va_end(buff);
-return (i);
+
+return (0);
 }
