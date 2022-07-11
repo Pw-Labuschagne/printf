@@ -1,9 +1,15 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
+ *
  * _format - Determines the format and calls the correct function
  * @a: pointer to the function needed
+ *
  * Return: Function to be used
+ *
  */
+
 int (*_format(char a))(va_list)
 {
 //*op_f: determines the function to be called when handling operations
@@ -31,6 +37,6 @@ if (ops[c].fun == a)
 {
 	return (ops[c].fun);
 }
-c++
+c++;
 }
 
