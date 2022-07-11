@@ -2,9 +2,9 @@
 #define MAIN_H
 
 
-typedef struct fun
+typedef struct fun_run
 {
-char *fun;
+char *fun_run;
 int (*f)(va_list);
 }op_f;
 
