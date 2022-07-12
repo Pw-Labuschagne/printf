@@ -1,25 +1,30 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdarg.h>
-
 /**
- * _printf - prints to stdout
+ * _printf - Prints to stdout
  * @format: conversation specifier
- * @...: number of variables
- * Return: int ammount;
+ * Return: Ammount of characters printed
  */
-
 int _printf(const char *format, ...)
 {
-int i; /* Counter for char*/
-va_list arg_list; /* Using ellips, use list to use as placeholder*/
+	int c, z, x;
+	char *i;
+	i = format;
 
-va_start(arg_list, format);/*Initializes the arg list*/
-for (i = 0; format[i]; i++)
-{
-	char c = va_arg(arg_list, int);
-	printf("%c,%d", c, i);
-va_end(arg_list); /* Ends the va list */
-return (i);
-}
+	for (z = 0; z < format[z]; z++)
+	{
+	switch(format)
+		case 'c' :
+			_putchar('%c');
+			break;
+		case 's' :
+			_putchar('%s');
+			beak;
+		case '%' :
+			_putchar('%');
+			break;
+		default :
+			_putchar(format[z]);
+	}
+x = strlen(format);
+return (x);
 }
