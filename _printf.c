@@ -10,6 +10,12 @@ int _printf(const char *format, ...)
 
 for (i = 0; i < format[i]; i++)
 {
+	if (format == NULL)
+	{
+		return (0);
+	}
+	if (format[i] == '%' && format[i + 1] == '%')
+	{
 	switch(format[i])
 	{
 		case 'c' :
@@ -26,6 +32,7 @@ for (i = 0; i < format[i]; i++)
 			break;
 		default :
 			_putchar(format[i]);
+	}
 	}
 }
 
