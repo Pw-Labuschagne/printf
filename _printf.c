@@ -4,7 +4,6 @@
  * @format: format conversation specifier to identify
  * Return: Amount of characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	int i, x;
