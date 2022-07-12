@@ -8,15 +8,16 @@ int _printf(const char *format, ...)
 {
 	int i, x;
 
+if (format == NULL)
+{
+	return (0);
+}
+
 for (i = 0; i < format[i]; i++)
 {
-	if (format == NULL)
-	{
-		return (0);
-	}
 	if (format[i] == '%' && format[i + 1] == '%')
 	{
-	switch(format[i])
+	switch(format[i + 1])
 	{
 		case 'c' :
 			_putchar('%');
@@ -33,6 +34,10 @@ for (i = 0; i < format[i]; i++)
 		default :
 			_putchar(format[i]);
 	}
+	}
+	else if (format[i] != '\0')
+	{
+		_putchar(format[i]);
 	}
 }
 
