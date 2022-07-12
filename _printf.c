@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdarg.h>
-
 /**
  * _printf - prints to stdout
  * @format: conversation specifier
@@ -22,4 +19,5 @@ for (i = 0; format[i]; i++)
 va_end(arg_list); /* Ends the va list */
 return (i);
 }
+return (0);
 }

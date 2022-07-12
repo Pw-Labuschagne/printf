@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct functions_mod
 {
@@ -12,6 +13,7 @@ typedef struct functions_mod
 
 int _putchar(char c);	/*Output to stout*/
 int _printf(const char *format, ...);	/*Feed prototype*/
+int (*input_mod(char s))();	/*Helps to determine function needed for input*/
 int _printf_c();	/*Character conversation specifier*/
 int _printf_s();	/*String conversation specifier*/
 int _printf_sp();	/*Special character specifier*/
