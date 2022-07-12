@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stddef.h>
-#include <stdlib.h>
 #include <stdarg.h>
 
 /**
@@ -13,14 +11,15 @@
 
 int _printf(const char *format, ...)
 {
-int i = 0; /* Counter for char*/
+int i; /* Counter for char*/
 va_list arg_list; /* Using ellips, use list to use as placeholder*/
 
 va_start(arg_list, format);/*Initializes the arg list*/
-i = vfprintf (stdout, format, arg_list);
+for (i = 0; format[i]; i++)
+{
+	char c = va_arg(arg_list, int);
+	printf("%c,%d", c, i);
 va_end(arg_list); /* Ends the va list */
-
-_printf;
 return (i);
-
+}
 }
