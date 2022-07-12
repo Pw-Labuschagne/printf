@@ -11,19 +11,25 @@ int _printf(const char *format, ...)
 
 for (i = 0; i < format[i]; i++)
 {
-	switch(format)
+	switch(format[i])
+	{
 		case 'c' :
-			_putchar('%c');
+			_putchar('%');
+			_putchar('c');
 			break;
-		case 's' ;
-			_putchar('%s');
+		case 's' :
+			_putchar('%');
+			_putchar('s');
 			break;
 		case '%' :
+			_putchar('%');
 			_putchar('%');
 			break;
 		default :
 			_putchar(format[i]);
+	}
 }
+
 x = strlen(format);
 _putchar('\0');
 return (x);
