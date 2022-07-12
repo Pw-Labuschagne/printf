@@ -1,27 +1,26 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stddef.h>
 #include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdarg.h>
+
 /**
- * _printf - Prints to the standard output STDOUT
- * @format: format of the variable data type
- * Return: 0
+ * _printf - prints to stdout
+ * @format: conversation specifier
+ * @...: number of variables
+ * Return: int ammount;
  */
+
 int _printf(const char *format, ...)
 {
-int i = 0, c = 0;
-va_list buff;
+int i = 0; /* Counter for char*/
+va_list arg_list; /* Using ellips, use list to use as placeholder*/
 
-if (format == NULL)
-{
-	return (0);
-}
-va_start(buff, format);
-c += va_arg(buff, int);
-while (format[i] != '\0')
-{
-	i++;
-	c++;
-}
-return (c);
+va_start(arg_list, format);/*Initializes the arg list*/
+i = vfprintf (stdout, format, arg_list);
+va_end(arg_list); /* Ends the va list */
+
+_printf;
+return (i);
+
 }
