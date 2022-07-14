@@ -1,28 +1,31 @@
-#ifndef MAIN_H
-#define MAIN_H
-#include <stdarg.h>
-#include <stdio.h>
+#ifndef _MAIN_H_
+#define _MAIN_H_
 #include <stdlib.h>
-typedef struct fun_run
-{
-char *fun_run;
-int (*f)(va_list);
-}op_f;
+#include <stdarg.h>
+#include <unistd.h>
 
-int _putchar(char c);
-int _printf(const char *format, ...);
-int _print_str(va_list);
-int _print_c(va_list);
-int _print_spec(va_list);
-int _print_int(va_list);
-int _print_rev(va_list);
-int _print_bin(va_list);
-int _print_rot13(va_list);
+/**
+ * struct helper_funcs - Helper functions and cases
+ * @c: Char for format
+ * @f: Function pointer for helper function to call
+ */
 
-/*typedef struct fun_run
+typedef struct helper_funcs
 {
-	char *fun_run;
+	char c;
 	int (*f)(va_list);
-}op_f;*/
+} hf;
+
+int _printf(const char *format, ...);
+int print_str(va_list);
+int print_ch(va_list);
+int print_int(va_list);
+int _putchar(char c);
+char *reverse(char s[]);
+int (*get_format(char s))(va_list);
+int special_ch(char c);
+int print_rev_str(va_list);
+int print_bin(va_list);
+int print_rot13(va_list);
 
 #endif
