@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef _MAIN_H_
 #define _MAIN_H_
 #include <stdlib.h>
@@ -27,5 +28,15 @@ int special_ch(char c);
 int print_rev_str(va_list);
 int print_bin(va_list);
 int print_rot13(va_list);
+=======
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdio.h>
+#include <string.h>
+#include <stddef.h>
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+>>>>>>> 34dc39dfdac772d805f5211d31a4f202fda142f2
 
 #endif
