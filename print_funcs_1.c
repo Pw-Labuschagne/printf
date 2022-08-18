@@ -1,23 +1,9 @@
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
- * print_int - Prints an integer and retruns number of bytes printed
+ * print_int - Prints an integer and retruns number of characters printed
  * @argu: va_list input
- * Return: On number of bytes printed
+ * Return: On number of characters printed
  */
 
 int print_int(va_list argu)
@@ -63,8 +49,7 @@ int print_int(va_list argu)
 }
 
 /**
- * print_ch - Function that prints character to output stream and returns
- * number of bytes printed
+ * print_ch - Function that prints character to output stream
  * @argu: va_list input
  * Return: 1 for size of char
  */
@@ -82,7 +67,6 @@ int print_ch(va_list argu)
 
 /**
  * print_str - Function that prints a string of charracters to output stream
- * and returns number of bytes printed
  * @argu: va_list input
  * Return: Int for size of character string passed
  */
@@ -112,9 +96,9 @@ int print_str(va_list argu)
 
 /**
  * print_rev_str - Function that prints a string of charracters to output
- * stream in reverse and returns number of bytes printed
+ * stream in reverse
  * @argu: va_list input
- * Return: Int for size of character string passed
+ * Return: Characters printed
  */
 
 int print_rev_str(va_list argu)

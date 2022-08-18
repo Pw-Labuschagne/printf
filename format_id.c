@@ -7,9 +7,9 @@
  * is not found
  */
 
-int (*get_format(char s))(va_list)
+int (*format_id(char c))(va_list)
 {
-	hf ops[] = {
+	pf ops[] = {
 		{'c', print_ch},
 		{'s', print_str},
 		{'i', print_int},
@@ -24,10 +24,10 @@ int (*get_format(char s))(va_list)
 
 	while (ops[i].c)
 	{
-		if (s == ops[i].c)
+		if (c == ops[i].c)
 			return (ops[i].f);
 		i++;
 	}
 
-	return (ops[i].f);
+	return(ops[i].f);
 }

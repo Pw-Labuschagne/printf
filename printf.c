@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _printf - function that prints different formats of data and
@@ -9,43 +9,43 @@
 
 int _printf(const char *format, ...)
 {
-	int byte_sum = 0, i, sp;
-	va_list args;
+	int char_num = 0, i, s_c;
+	va_list input;
 
-	va_start(args, format);
+	va_start(input, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-		va_end(args);
+		va_end(input);
 		return (-1);
 	}
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
-			sp = special_ch(format[i + 1]);
+			s_c = special_ch(format[i + 1]);
 			if (format[i + 1] == '%')
 			{
-				byte_sum += _putchar(format[i + 1]);
+				char_num += _putchar(format[i + 1]);
 				i++;
 				continue;
 			}
-			if (sp == 1)
+			if (s_c == 1)
 			{
-				byte_sum += get_format(format[i + 1])(args);
+				char_num += format_id(format[i + 1])(input);
 				i++;
 				continue;
 			}
-			else if (sp == 0)
+			else if (s_c == 0)
 			{
-				byte_sum += _putchar(format[i]);
-				byte_sum += _putchar(format[i + 1]);
+				char_num += _putchar(format[i]);
+				char_num += _putchar(format[i + 1]);
 				i++;
 				continue;
 			}
 		}
 		else
-			byte_sum += _putchar(format[i]);
+			char_num += _putchar(format[i]);
 	}
-	va_end(args);
-	return (byte_sum);
+	va_end(input);
+	return (char_num);
 }

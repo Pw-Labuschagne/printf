@@ -3,7 +3,7 @@
 /**
  * reverse - Function that reverses an array of characters
  * @s: Char array
- * Return: Char pointer with characters that have been reversed
+ * Return: Reversed characters
  */
 
 char *reverse(char *s)
@@ -26,7 +26,7 @@ char *reverse(char *s)
 /**
  * special_ch - function that checks for special formated characters
  * @c: Char to be checked
- * Return: 1 if special character is found, 0 otherwise
+ * Return: 1 if special character is found else 0
  */
 
 int special_ch(char c)
@@ -40,8 +40,7 @@ int special_ch(char c)
 }
 
 /**
- * print_bin - function that prints an integer in its binary form
- * and returns number of bytes printed
+ * print_bin - function that prints an integer in binary
  * @argu: va_list input
  * Return: Int for number of integers printed
  */
